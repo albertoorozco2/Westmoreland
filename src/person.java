@@ -29,7 +29,11 @@ public class person {
     
     if (x < 0) x = parent.width;
     }
-
+    
+    if(x>=700&&x<=760&&y>=135&&y<=150){
+      x=((float) Math.random() * 56)+701;
+      y=140;
+    }
 
   }
 

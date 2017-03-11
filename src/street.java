@@ -20,6 +20,12 @@ public class street {
     parent.fill(221, 233, 237);
     parent.rect(0, 100, 1000, 50);// up sidewalk
     parent.rect(0, 550, 1000, 50);// down sidewalk
+    parent.fill(0, 0, 255);
+    parent.rect(700, 135, 60, 15);// up sidewalk
+    parent.textSize(12);
+    parent.fill(255, 255, 255);
+    parent.text("bus stop", 700, 145); // text
+    
     parent.fill(185, 195, 199); // streets
     parent.rect(0, 150, 1000, 100);
     parent.rect(0, 250, 1000, 100);

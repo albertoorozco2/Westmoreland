@@ -12,6 +12,8 @@ public class vehicle {
   float rgb1 = (float) (Math.random()*200);
   float rgb2 = (float) (Math.random()*200);
   float rgb3 = (float) (Math.random()*200);
+  int i;
+  
 
 
   public vehicle(PApplet p) {
@@ -24,24 +26,42 @@ public class vehicle {
     if (type == 1) { // bus
       parent.fill(rgb1, rgb2, rgb3);
       parent.rect(x, y, 120, 50, 8);
+      parent.textSize(12);
+      parent.fill((rgb1+50),(rgb2+50),(rgb3+50));
+      parent.text("BUS", x+15, y+30); // text
       x += 1;
-      if (x > parent.width)
+      if(x>=650&&x<=652&&y==175){
+        x=650;
+      }
+      else if (x > parent.width){
         x = 0;
+      }
+      
     } else if (type == 2) { // car
       parent.fill(rgb1, rgb2, rgb3);
       parent.rect(x, y+5, 60, 40, 8);
+      parent.textSize(12);
+      parent.fill((rgb1+50),(rgb2+50),(rgb3+50));
+      parent.text("CAR", x+15, y+30); // text
       x += 2;
       if (x > parent.width)
         x = 0;
     } else if (type == 3) { // taxi
+     
       parent.fill(255, 255, 0);
       parent.rect(x, y+5, 60, 40, 9);
+      parent.textSize(12);
+      parent.fill(0);
+      parent.text("TAXI", x+15, y+30); // text
       x += 1.5;
       if (x > parent.width)
         x = 0;
     } else if (type == 4) { // bicy
       parent.fill(rgb1, rgb2, rgb3);
       parent.rect(x, y-9, 50, 8, 8);
+      parent.textSize(10);
+      parent.fill((rgb1+60),(rgb2+60),(rgb3+60));
+      parent.text("Bike", x+4, y-1); // text
       x += 2.5;
       if (x > parent.width)
         x = 0;
