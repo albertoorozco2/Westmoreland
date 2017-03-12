@@ -13,7 +13,7 @@ public class vehicle {
   float rgb2 = (float) (Math.random()*200);
   float rgb3 = (float) (Math.random()*200);
   int i;
-  
+
 
 
   public vehicle(PApplet p) {
@@ -31,7 +31,7 @@ public class vehicle {
       parent.text("BUS", x+15, y+30); // text
       x += 1;
       if(x>=650&&x<=652&&y==175){
-        x=650;
+        x=651;
       }
       else if (x > parent.width){
         x = 0;
@@ -44,6 +44,12 @@ public class vehicle {
       parent.fill((rgb1+50),(rgb2+50),(rgb3+50));
       parent.text("CAR", x+15, y+30); // text
       x += 2;
+      
+      if(x==400){
+        if(y==475){y-=100;}
+        else{y+=100;} 
+      }
+      
       if (x > parent.width)
         x = 0;
     } else if (type == 3) { // taxi
@@ -54,6 +60,11 @@ public class vehicle {
       parent.fill(0);
       parent.text("TAXI", x+15, y+30); // text
       x += 1.5;
+      if(x==400){
+        if(y==475){y-=100;}
+        else{y+=100;} 
+      }
+      
       if (x > parent.width)
         x = 0;
     } else if (type == 4) { // bicy

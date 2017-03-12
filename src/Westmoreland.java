@@ -16,7 +16,6 @@ public class Westmoreland extends PApplet {
 
   public static void main(String[] args) {
     PApplet.main("Westmoreland");
-
   }
 
   public void settings() {
