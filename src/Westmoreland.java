@@ -6,8 +6,8 @@ import processing.core.PApplet;
 
 public class Westmoreland extends PApplet {
 
-  int people = (int) random(100, 200);
-  int vehicles = (int) random(10, 30);
+  int people = (int) random(50, 100);
+  int vehicles = (int) random(10, 40);
 
   street st = new street(this);// street
   ArrayList<person> alPeople = new ArrayList<person>();

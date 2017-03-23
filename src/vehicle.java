@@ -31,7 +31,12 @@ public class vehicle {
       parent.text("BUS", x+15, y+30); // text
       x += 1;
       if(x>=650&&x<=652&&y==175){
-        x=651;
+//        x=651;
+        int random = (int) (Math.random()*100);; 
+        
+          
+          if(random<1){x=653;}
+          else{x=651;}
       }
       else if (x > parent.width){
         x = 0;
@@ -87,7 +92,7 @@ public class vehicle {
     if(rn2<.25){ type=1;} // bus 
     else if(rn2<.55){ type=2;}//car
     else if(rn2<.75){ type=3;} //taxi
-    else if(rn2<1){ type=4;} //bici
+    else if(rn2<1){ type=4;} //bike
     
     
     if (rn1 <= 0.25) {
