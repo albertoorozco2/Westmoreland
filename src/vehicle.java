@@ -78,11 +78,19 @@ public class vehicle {
       parent.fill(0);
       parent.text("TAXI", x + 15, y + 30); // text
       x += 1.5;
-      if (x == 400) {
+      if (((int) (Math.random() * 1000)) < 2) {
         if (y == 475) {
           y -= 100;
-        } else {
+        } else if (y == 175) {
           y += 100;
+        } else {
+          if (((int) (Math.random() * 1000)) < 499) {
+            y -= 100;
+          } else {
+            y += 100;
+          }
+
+
         }
       }
 

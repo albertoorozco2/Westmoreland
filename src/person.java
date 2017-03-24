@@ -5,6 +5,7 @@ public class person {
   float x = ((float) Math.random() * 1000);
   float y = 110 + (float) (Math.random() * ((190 - 110) + 1));
   double direction = Math.random();
+  double type =  Math.random();
 
 
 
@@ -23,12 +24,18 @@ public class person {
     parent.text(":)", x - 3, y + 2); // text
 
     if (direction >= .5) {
-      x += .5;
+      if(type<=.33){x += .1;}
+      else if(type<=.66){x += .3;}
+      else if(type<=.99){x += .5;}
+      
+      
       if (x > parent.width)
         x = 0;
 
     } else if (direction < .5) {
-      x -= .5;
+      if(type<=.33){x -= .1;}
+      else if(type<=.66){x -= .3;}
+      else if(type<=.99){x -= .5;}
 
       if (x < 0)
         x = parent.width;
@@ -38,10 +45,8 @@ public class person {
     if (x >= 700 && x <= 760 && y >= 135 && y <= 150) {
       // x=759;
       y = 140;
-      int random = (int) (Math.random() * 100);;
-
-
-      if (random < 1) {
+      
+      if (((int) (Math.random() * 100)) < 1) {
         if (direction >= .5) {
           x = 761;
         } else {
@@ -50,10 +55,25 @@ public class person {
       } else {
         x = 759;
       }
-
-
+      
+    
     }
 
+    if (((int) (Math.random() * 100)) < 100) {
+      for(int i =0; i>100; i++){
+      if(y>=105&&y<=145){
+       y+=.5;
+      }
+      }
+    }
+    if (((int) (Math.random() * 100)) < 100) {
+      for(int i =0; i>100; i++){
+      if(y>=105&&y<=145){
+      y-=.5;
+      }
+      }
+    } 
+    
   }
 
   public void yValue() {

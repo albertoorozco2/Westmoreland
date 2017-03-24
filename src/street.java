@@ -14,8 +14,8 @@ public class street {
     parent.textSize(32);
     parent.text("Westmoreland Street", 330, 50); // text
     parent.fill(0, 102, 153);
-    parent.textSize(12);
-    parent.text("Number of people " + people + " numbers of cars " + cars, 330, 70); // text
+    parent.textSize(13);
+    parent.text("Number of people " + people + " numbers of vehicles " + cars, 330, 70); // text
 
     parent.fill(221, 233, 237);
     parent.rect(0, 100, 1000, 50);// up sidewalk
