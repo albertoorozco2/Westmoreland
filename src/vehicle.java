@@ -8,10 +8,10 @@ public class vehicle {
   double rn1 = Math.random();
   double rn2 = Math.random();
   float y;
-  
-  float rgb1 = (float) (Math.random()*200);
-  float rgb2 = (float) (Math.random()*200);
-  float rgb3 = (float) (Math.random()*200);
+
+  float rgb1 = (float) (Math.random() * 200);
+  float rgb2 = (float) (Math.random() * 200);
+  float rgb3 = (float) (Math.random() * 200);
   int i;
 
 
@@ -27,57 +27,73 @@ public class vehicle {
       parent.fill(rgb1, rgb2, rgb3);
       parent.rect(x, y, 120, 50, 8);
       parent.textSize(12);
-      parent.fill((rgb1+50),(rgb2+50),(rgb3+50));
-      parent.text("BUS", x+15, y+30); // text
+      parent.fill((rgb1 + 50), (rgb2 + 50), (rgb3 + 50));
+      parent.text("BUS", x + 15, y + 30); // text
       x += 1;
-      if(x>=650&&x<=652&&y==175){
-//        x=651;
-        int random = (int) (Math.random()*100);; 
-        
-          
-          if(random<1){x=653;}
-          else{x=651;}
-      }
-      else if (x > parent.width){
+      if (x >= 650 && x <= 652 && y == 175) {
+        // x=651;
+        // int random = (int) (Math.random()*1000);
+
+
+        if (((int) (Math.random() * 1000)) < 2) {
+          x = 653;
+        } else {
+          x = 651;
+        }
+      } else if (x > parent.width) {
         x = 0;
       }
-      
+
     } else if (type == 2) { // car
       parent.fill(rgb1, rgb2, rgb3);
-      parent.rect(x, y+5, 60, 40, 8);
+      parent.rect(x, y + 5, 60, 40, 8);
       parent.textSize(12);
-      parent.fill((rgb1+50),(rgb2+50),(rgb3+50));
-      parent.text("CAR", x+15, y+30); // text
+      parent.fill((rgb1 + 50), (rgb2 + 50), (rgb3 + 50));
+      parent.text("CAR", x + 15, y + 30); // text
       x += 2;
-      
-      if(x==400){
-        if(y==475){y-=100;}
-        else{y+=100;} 
+
+      if (x == 400) {
+        if (y == 475) {
+          y -= 100;
+        } else if (y == 175) {
+          y += 100;
+        } else {
+          if (((int) (Math.random() * 1000)) < 499) {
+            y -= 100;
+          } else {
+            y += 100;
+          }
+
+
+        }
       }
-      
+
       if (x > parent.width)
         x = 0;
     } else if (type == 3) { // taxi
-     
+
       parent.fill(255, 255, 0);
-      parent.rect(x, y+5, 60, 40, 9);
+      parent.rect(x, y + 5, 60, 40, 9);
       parent.textSize(12);
       parent.fill(0);
-      parent.text("TAXI", x+15, y+30); // text
+      parent.text("TAXI", x + 15, y + 30); // text
       x += 1.5;
-      if(x==400){
-        if(y==475){y-=100;}
-        else{y+=100;} 
+      if (x == 400) {
+        if (y == 475) {
+          y -= 100;
+        } else {
+          y += 100;
+        }
       }
-      
+
       if (x > parent.width)
         x = 0;
     } else if (type == 4) { // bicy
       parent.fill(rgb1, rgb2, rgb3);
-      parent.rect(x, y-9, 50, 8, 8);
+      parent.rect(x, y - 9, 50, 8, 8);
       parent.textSize(10);
-      parent.fill((rgb1+60),(rgb2+60),(rgb3+60));
-      parent.text("Bike", x+4, y-1); // text
+      parent.fill((rgb1 + 60), (rgb2 + 60), (rgb3 + 60));
+      parent.text("Bike", x + 4, y - 1); // text
       x += 2.5;
       if (x > parent.width)
         x = 0;
@@ -88,13 +104,21 @@ public class vehicle {
   }
 
   public void values() {
-    
-    if(rn2<.25){ type=1;} // bus 
-    else if(rn2<.55){ type=2;}//car
-    else if(rn2<.75){ type=3;} //taxi
-    else if(rn2<1){ type=4;} //bike
-    
-    
+
+    if (rn2 < .25) {
+      type = 1;
+    } // bus
+    else if (rn2 < .55) {
+      type = 2;
+    } // car
+    else if (rn2 < .75) {
+      type = 3;
+    } // taxi
+    else if (rn2 < 1) {
+      type = 4;
+    } // bike
+
+
     if (rn1 <= 0.25) {
       y = 175;
     } else if (rn1 <= 0.55) {
@@ -105,10 +129,15 @@ public class vehicle {
       y = 475;
     }
 
-       if(rn2<.25){ type=1;}
-       else if(rn2<.55){ type=2;}
-       else if(rn2<.75){ type=3;}
-       else if(rn2<1){ type=4;}
+    if (rn2 < .25) {
+      type = 1;
+    } else if (rn2 < .55) {
+      type = 2;
+    } else if (rn2 < .75) {
+      type = 3;
+    } else if (rn2 < 1) {
+      type = 4;
+    }
   }
 }
 
