@@ -6,6 +6,8 @@ public class person {
   float y = 110 + (float) (Math.random() * ((190 - 110) + 1));
   double direction = Math.random();
   double type =  Math.random();
+ // int move=2;
+  
 
 
 
@@ -59,20 +61,37 @@ public class person {
     
     }
 
-    if (((int) (Math.random() * 100)) < 100) {
-      for(int i =0; i>100; i++){
-      if(y>=105&&y<=145){
-       y+=.5;
-      }
-      }
-    }
-    if (((int) (Math.random() * 100)) < 100) {
-      for(int i =0; i>100; i++){
-      if(y>=105&&y<=145){
-      y-=.5;
-      }
-      }
-    } 
+//    if ((((int) (Math.random() * 1000)) < 1&&y<=140&&y>=110)||(((int) (Math.random() * 1000)) < 1&&y<=590&&y>=560)) 
+//    {
+//      y=y+10;
+//    }
+//    
+//    if(move==1){
+//      y+=.1;
+//    }else if(move==0){
+//      y-=.1;
+//    }else{}
+//    
+//    if(y<=115||y>=595){
+//      move=1;
+//    }else if(y>=135||y<=565){
+//      move=0;
+//    }
+//      
+//    if (((int) (Math.random() * 100)) < 5) {
+//      
+//      if(y>=105&&y<=145){
+//       y+=1;
+//      }
+//      
+//    }
+//    if (((int) (Math.random() * 100)) < 5) {
+//      
+//      if(y>=105&&y<=145){
+//       y-=1;
+//      }
+//      
+//    } 
     
   }
 
@@ -81,6 +100,6 @@ public class person {
       y = 560 + (float) (Math.random() * ((590 - 560) + 1));
     }
 
-
+ System.out.println();
   }
 }
