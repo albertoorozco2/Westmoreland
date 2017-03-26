@@ -3,10 +3,10 @@ import processing.core.PApplet;
 public class person {
   PApplet parent;
   float x = ((float) Math.random() * 1000);
-  float y = 110 + (float) (Math.random() * ((190 - 110) + 1));
+  float y = 110 + (float) (Math.random() * ((180 - 110) + 1));
   double direction = Math.random();
   double type =  Math.random();
- // int move=2;
+  int move=2;
   
 
 
@@ -20,10 +20,14 @@ public class person {
 
 
     parent.fill(0, 255, 0);
-    parent.ellipse(x, y, 10, 10);
+    parent.ellipse(x, y, 5, 5);
     parent.textSize(8);
     parent.fill(0, 0, 0);
     parent.text(":)", x - 3, y + 2); // text
+    parent.line(x, y+3, x, y+13);//body
+    parent.line(x-3, y+6, x+3, y+6);//arms
+    parent.line(x, y+13, x+2, y+16); //leg
+    parent.line(x, y+13, x-2, y+16); //leg
 
     if (direction >= .5) {
       if(type<=.33){x += .1;}
@@ -44,9 +48,9 @@ public class person {
     }
     // float startTime = parent.millis();
 
-    if (x >= 700 && x <= 760 && y >= 135 && y <= 150) {
+    if (x >= 700 && x <= 760 && y >= 120 && y <= 150) {
       // x=759;
-      y = 140;
+      y = 130;
       
       if (((int) (Math.random() * 100)) < 1) {
         if (direction >= .5) {
@@ -61,20 +65,26 @@ public class person {
     
     }
 
-//    if ((((int) (Math.random() * 1000)) < 1&&y<=140&&y>=110)||(((int) (Math.random() * 1000)) < 1&&y<=590&&y>=560)) 
-//    {
-//      y=y+10;
+    if ((((int) (Math.random() * 1000)) < 2&&y<=130&&y>=115)) 
+    {
+      y=y+5;
+    } 
+    if ((((int) (Math.random() * 1000)) < 1&&y<=140&&y>=115)) 
+    {
+      y=y-5;
+    } 
+ //   else{
+//      move=2;
 //    }
-//    
 //    if(move==1){
 //      y+=.1;
 //    }else if(move==0){
 //      y-=.1;
 //    }else{}
 //    
-//    if(y<=115||y>=595){
+//    if(y<=115){
 //      move=1;
-//    }else if(y>=135||y<=565){
+//    }else if(y>=135){
 //      move=0;
 //    }
 //      

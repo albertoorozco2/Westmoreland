@@ -13,6 +13,7 @@ public class vehicle {
   float rgb2 = (float) (Math.random() * 200);
   float rgb3 = (float) (Math.random() * 200);
   int i;
+  float line;
 
 
 
@@ -78,7 +79,10 @@ public class vehicle {
       parent.fill(0);
       parent.text("TAXI", x + 15, y + 30); // text
       x += 1.5;
-      if (((int) (Math.random() * 1000)) < 2) {
+      if (((int) (Math.random() * 1000)) < 10) {
+        
+
+        
         if (y == 475) {
           y -= 100;
         } else if (y == 175) {
@@ -89,7 +93,6 @@ public class vehicle {
           } else {
             y += 100;
           }
-
 
         }
       }
@@ -147,5 +150,6 @@ public class vehicle {
       type = 4;
     }
   }
+  
 }
 
