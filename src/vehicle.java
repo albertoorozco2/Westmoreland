@@ -12,8 +12,8 @@ public class vehicle {
   float rgb1 = (float) (Math.random() * 200);
   float rgb2 = (float) (Math.random() * 200);
   float rgb3 = (float) (Math.random() * 200);
-  int i;
-  float line;
+
+  float state = 1;
 
 
 
@@ -51,23 +51,40 @@ public class vehicle {
       parent.textSize(12);
       parent.fill((rgb1 + 50), (rgb2 + 50), (rgb3 + 50));
       parent.text("CAR", x + 15, y + 30); // text
+      
+      if (((int) (Math.random() * 1000))<2){
+        if(y==175){y+=1 ; state=2;}
+        else if(y==475){y-=1 ; state=3;}
+        else if(y==275||y==375){
+          if (Math.random()<.45){
+            
+          y+=1 ; state=2;}else{
+          
+          y-=1 ; state=3;
+          
+        }
+        }
+        }
+      changeLine();
+     
+      
       x += 2;
 
-      if (x == 400) {
-        if (y == 475) {
-          y -= 100;
-        } else if (y == 175) {
-          y += 100;
-        } else {
-          if (((int) (Math.random() * 1000)) < 499) {
-            y -= 100;
-          } else {
-            y += 100;
-          }
-
-
-        }
-      }
+//      if (x == 400) {
+//        if (y == 475) {
+//          y -= 100;
+//        } else if (y == 175) {
+//          y += 100;
+//        } else {
+//          if (((int) (Math.random() * 1000)) < 499) {
+//            y -= 100;
+//          } else {
+//            y += 100;
+//          }
+//
+//
+//        }
+//      }
 
       if (x > parent.width)
         x = 0;
@@ -78,24 +95,39 @@ public class vehicle {
       parent.textSize(12);
       parent.fill(0);
       parent.text("TAXI", x + 15, y + 30); // text
-      x += 1.5;
-      if (((int) (Math.random() * 1000)) < 10) {
-        
-
-        
-        if (y == 475) {
-          y -= 100;
-        } else if (y == 175) {
-          y += 100;
-        } else {
-          if (((int) (Math.random() * 1000)) < 499) {
-            y -= 100;
-          } else {
-            y += 100;
-          }
-
+      
+      if (((int) (Math.random() * 1000))<1){
+        if(y==175){y+=1 ; state=2;}
+        else if(y==475){y-=1 ; state=3;}
+        else if(y==275||y==375){
+          if (Math.random()<.45){
+            
+          y+=1 ; state=2;}else{
+          
+          y-=1 ; state=3;
+          
         }
-      }
+        }
+        }
+      changeLine();
+      x += 1.5;
+//      if (((int) (Math.random() * 1000)) < 10) {
+//        
+//
+//        
+//        if (y == 475) {
+//          y -= 100;
+//        } else if (y == 175) {
+//          y += 100;
+//        } else {
+//          if (((int) (Math.random() * 1000)) < 499) {
+//            y -= 100;
+//          } else {
+//            y += 100;
+//          }
+//
+//        }
+//      }
 
       if (x > parent.width)
         x = 0;
@@ -150,6 +182,55 @@ public class vehicle {
       type = 4;
     }
   }
+
+  public void changeLine(){
+    
+    
+    if(state==2){
+     
+      if (y >= 176&&y<=274) {
+        y += 1;
+        
+      }else if(y==275){
+        state=1;
+        
+      }else if (y >= 276&&y<=374) {
+        y+=1;
+      }else if(y==375){
+        state=1;
+      }else if (y >= 376&&y<=474) {
+        y+=1;
+      }else if(y==475){
+        state=1;
+      }
+    } else if(state==3){
+     
+      if (y <= 474&&y>=376) {
+        y -= 1;
+        
+      }else if(y==375){
+        state=1;
+        
+      }else if (y <= 374&&y>=276) {
+        y-=1;
+      }else if(y==275){
+        state=1;
+      }else if (y <= 274&&y>=176) {
+        y-=1;
+      }else if(y==175){
+        state=1;
+      }
+    } 
+        
+        
+      
+    
+    
+    
   
+
+  
+  }
 }
+
 

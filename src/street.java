@@ -55,8 +55,8 @@ public class street {
     parent.fill(144, 144, 144);
     parent.rect(0, 250, 1000, 100);
     parent.fill(255, 221, 0);
-    parent.rect(0, 247, 1000, 3);// yelloe line
-    parent.rect(0, 250, 1000, 3);// yelloe line
+    parent.rect(0, 249, 1000, 2);// yelloe line
+   // parent.rect(0, 250, 1000, 3);// yelloe line
     parent.fill(255, 255, 255);
     parent.rect(30, 300, 20, 3);
     parent.rect(70, 300, 20, 3);
@@ -88,8 +88,8 @@ public class street {
     parent.fill(144, 144, 144);
     parent.rect(0, 350, 1000, 100);
     parent.fill(255, 221, 0);
-    parent.rect(0, 347, 1000, 3);// yelloe line
-    parent.rect(0, 350, 1000, 3);// yelloe line
+    parent.rect(0, 349, 1000, 2);// yelloe line
+   // parent.rect(0, 350, 1000, 3);// yelloe line
     parent.fill(255, 255, 255);
     parent.rect(30, 400, 20, 3);
     parent.rect(70, 400, 20, 3);
@@ -122,8 +122,8 @@ public class street {
     parent.fill(144, 144, 144);
     parent.rect(0, 450, 1000, 100);
     parent.fill(255, 221, 0);
-    parent.rect(0, 447, 1000, 3);// yelloe line
-    parent.rect(0, 450, 1000, 3);// yelloe line
+    parent.rect(0, 449, 1000, 2);// yelloe line
+    //parent.rect(0, 450, 1000, 3);// yelloe line
     parent.fill(255, 255, 255);
     parent.rect(30, 500, 20, 3);
     parent.rect(70, 500, 20, 3);
